@@ -1,0 +1,40 @@
+public class Innings2 {
+
+	public static void main(String[] args) {
+		Innings obj=new Innings();
+		int runs1[]={1,2,4,6,3,1,2,3,4,6,6,6,6,4,3,2,2,2,1,3,2,2,1,3,4,6,0,0,1,0};
+		int runs2[]={1,6,4,6,0,0,2,3,0,6,2,6,6,2,3,1,2,0,1,3,2,2,1,3,4,6,0,0,1,0};
+		int runs3[]={1,2,4,6,3,1,2,3,1,6,2,6,2,4,3,2,2,2,1,3,2,2,1,3,4,6,4,0,1,0};
+		int runs4[]={6,4,4,6,3,1,2,3,4,6,6,6,6,4,3,2,2,4,1,3,2,2,1,3,4,6,3,0,1,3};
+		int runs5[]={0,2,6,6,4,1,2,0,4,2,6,3,6,4,3,1,2,2,6,3,2,4,1,3,4,6,0,0,1,0};
+		int runscore1=obj.runscore(runs1);
+		int runscore2=obj.runscore(runs2);
+		int runscore3=obj.runscore(runs3);
+		int runscore4=obj.runscore(runs4);
+		int runscore5=obj.runscore(runs5);
+		int avg=runscore1+runscore2+runscore3+runscore4+runscore5/5;
+		System.out.println("Average score of total innings is "+avg);
+		System.out.println("Total runs in Inning1 is "+runscore1);
+		System.out.println("Total runs in Inning2 is "+runscore2);
+		System.out.println("Total runs in Inning3 is "+runscore3);
+		System.out.println("Total runs in Inning4 is "+runscore4);
+		System.out.println("Total runs in Inning5 is "+runscore5);
+		System.out.println("Count of 0s,1s,2s,3s,4s,6s in Innings1 ");
+		obj.Countofruns(runs1);
+		System.out.println("Count of 0s,1s,2s,3s,4s,6s in Innings2 ");
+		obj.Countofruns(runs2);
+		System.out.println("Count of 0s,1s,2s,3s,4s,6s in Innings3 ");
+		obj.Countofruns(runs3);
+		System.out.println("Count of 0s,1s,2s,3s,4s,6s in Innings4 ");
+		obj.Countofruns(runs4);
+		System.out.println("Count of 0s,1s,2s,3s,4s,6s in Innings5 ");
+		obj.Countofruns(runs5);
+		int avgstrike1=obj.StrikeRate(runscore1);
+		int avgstrike2=obj.StrikeRate(runscore1);
+		int avgstrike3=obj.StrikeRate(runscore1);
+		int avgstrike4=obj.StrikeRate(runscore1);
+		int avgstrike5=obj.StrikeRate(runscore1);
+		int avgstrike=avgstrike1+avgstrike2+avgstrike3+avgstrike4+avgstrike5/5;
+		System.out.println("Average score of total innings is "+avgstrike);
+	}
+}
