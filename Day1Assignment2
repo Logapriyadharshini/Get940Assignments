@@ -1,0 +1,54 @@
+import java.util.*;
+public class Innings {
+
+	public static void main(String[] args) {
+		Scanner s=new Scanner(System.in);
+		int runs[]=new int[30];
+		System.out.println("Enter run values ");
+		for(int i=0;i<runs.length;i++)
+			runs[i]=s.nextInt();
+		int totalscore=runscore(runs);
+		System.out.println("Total run Score is "+totalscore);
+        Countofruns(runs);
+        System.out.println("Strike rate is "+StrikeRate(totalscore));
+	}
+static int runscore(int runs[])
+{
+	int sum=0;
+	for(int i=0;i<runs.length;i++)
+		sum+=runs[i];
+	return sum;
+}
+static void Countofruns(int runs[])
+{
+	int countof0s=0,countof1s=0,countof2s=0,countof3s=0,countof4s=0,countof6s=0;
+	for(int i=0;i<runs.length;i++)
+	{
+		if(runs[i]==0)
+			countof0s++;
+		if(runs[i]==1)
+			countof1s++;
+		if(runs[i]==2)
+			countof2s++;
+		if(runs[i]==3)
+			countof3s++;
+		if(runs[i]==4)
+			countof4s++;
+		if(runs[i]==6)
+			countof6s++;
+	}
+	System.out.println("Count of os is "+countof0s);
+	System.out.println("Count of 1s is "+countof1s);
+	System.out.println("Count of 2s is "+countof2s);
+	System.out.println("Count of 3s is "+countof3s);
+	System.out.println("Count of 4s is "+countof4s);
+	System.out.println("Count of 6s is "+countof6s);
+
+}
+
+static int StrikeRate(int totalscore)
+{
+	int rate=totalscore*30/100;
+	return rate;
+}
+}
